@@ -1,38 +1,40 @@
+import java.util.Arrays;
+
 public class Bird {
-    private int x;
-    private int positionX;
-    private int vx;
-    private int best;
+    private double x[];
+    private double[] best;
+    private double v[];
 
-    public int getBest() {
-        return best;
-    }
-
-    public void setBest(int best) {
-        this.best = best;
-    }
-
-    public int getX() {
+    public double[] getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double[] x) {
         this.x = x;
     }
 
-    public int getPositionX() {
-        return positionX;
+    public double[] getBest() {
+        return best;
     }
 
-    public void setPositionX(int positionX) {
-        this.positionX = positionX;
+    public void setBest(double[] best) {
+        this.best = best;
     }
 
-    public int getVx() {
-        return vx;
+    public double[] getV() {
+        return v;
     }
 
-    public void setVx(int vx) {
-        this.vx = vx;
+    public void setV(double[] v) {
+        this.v = v;
+    }
+
+    @Override
+    public String toString() {
+        return "Bird{" +
+                "x=" + Arrays.toString(x) +
+                ", best=" + Arrays.toString(best) +
+                ", v=" + Arrays.toString(v) +
+                '}';
     }
 }
