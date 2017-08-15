@@ -17,10 +17,14 @@ public class PSO {
         PSO pso = new PSO();
         pso.setFun(new Function() {
             public double f(double[] xs) {
-                return Math.abs(1313 - xs[0] * xs[0] - xs[1] * xs[1]);
+                double sum = 0;
+                for (int i = 0; i < xs.length; i++) {
+                    sum += (i+1)*xs[i]*xs[i];
+                }
+                return Math.abs(35498 - sum);
             }
         });
-        List<Bird> birds = createBird(2, 1, 50, 1, 5, pso.getFun(), 5, pso);
+        List<Bird> birds = createBird(10, 0, 100, 1, 5, pso.getFun(), 200, pso);
         pso.setBirds(birds);
         for (Bird bird : birds) {
             System.out.println(bird);

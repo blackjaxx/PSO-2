@@ -7,8 +7,14 @@ public class Main2 {
     private static int aim = 35498;
 
     public static void main(String[] args) {
-        int[] xs = new int[10];
-        place(xs, 0);
+        double[] result = {92.0, 34.0, -36.0, 32.0, 27.0, 18.0, 19.0, -14.0, -14.0, 23.0};
+        double sum = 0;
+        for (int i = 0; i < result.length; i++) {
+            sum+=(i+1)*result[i]*result[i];
+        }
+        System.out.println(sum);
+        //int[] xs = new int[10];
+        //place(xs, 0);
     }
 
     public static void place(int[] xs, int index) {
